@@ -4,45 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign-Up Form</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="side-image">
-        <p>Sign-Up Form</p>
+    <div class="side-hero">
+        <p class="title">Sign-Up Form</p>
+        <p class="author">Photo by Gloria Cretu on Unsplash</p>
     </div>
-    <div class="form-container">
+    <div class="info-container">
         <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <em>now</em> to get started.</p>
         <p>You <em>know</em> you <em>want</em> to.</p>
-        <form id="log-in-form" action="" method="post">
-            <p>Let's do this!</p>
-            <p>
-                <label for="first-name">First Name</label>
-                <input type="text" name="first-name" id="first-name" required>
-            </p>
-            <p>
-                <label for="last-name">Last Name</label>
-                <input type="text" name="last-name" id="last-name" required>
-            </p>
-            <p>
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email" required>
-            </p>
-            <p>
-                <label for="phone-num">Phone Number</label>
-                <input type="tel" name="phone-num" id="phone-num">
-            </p>
-            <p>
-                <label for="password">Password</label>
-                <input type="password" name="password" id="password" required>
-            </p>
-            <p>
-                <label for="password-confirm">Last Name</label>
-                <input type="password" name="password-confirm" id="password-confirm" required>
-            </p>
-        </form>
-        <p>
+        <div class="form-container">
+            <p class="form-title">Let's do this!</p>
+            <form id="log-in-form" action="" method="post">
+                <div>
+                    <label for="first-name">First Name</label>
+                    <input type="text" name="first-name" id="first-name" required>
+                </div>
+                <div>
+                    <label for="last-name">Last Name</label>
+                    <input type="text" name="last-name" id="last-name" required>
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" title="Enter a valid email" required>
+                </div>
+                <div>
+                    <label for="phone-num">Phone Number</label>
+                    <input type="tel" name="phone-num" id="phone-num" pattern="[0-9]*" title="Enter a valid phone number" required>
+                </div>
+                <div>
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" pattern=".{8,}" minlength="8" title="Password must be at least 8 characters" required>
+                </div>
+                <div>
+                    <label for="password-confirm">Confirm Password</label>
+                    <input type="password" name="password-confirm" id="password-confirm" pattern=".{8,}" title="Password must be at least 8 characters" required>
+                </div>
+            </form>
+        </div>
+        <div>
             <button type="submit" form="log-in-form">Create Account</button>
-        </p>
-        <p>Already have an account? <span>Log in</span></p>
+        </div>
+        <p class="account-already">Already have an account? <span class="log-in">Log in</span></p>
     </div>
 </body>
 </html>
