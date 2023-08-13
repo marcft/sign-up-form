@@ -6,6 +6,7 @@ inputList.forEach(input => {input.addEventListener('change', inputValidation)})
 
 function formValidation() {
     inputList.forEach((input) => {
+        // We add the possible-invalid class to everyone because the input:valid selector has higher specificity in CSS
         input.classList.add('possible-invalid');
 
         if(!input.checkValidity()) {
