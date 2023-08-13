@@ -12,7 +12,7 @@ Welcome to the Basic Formulary with Form Validation project! This repository sho
 
 ## Demo
 
-Check out the live demo of the project [here](link_to_your_demo_page).
+Check out the live demo of the project [here](https://marcft.github.io/sign-up-form/).
 
 ## Credits
 
