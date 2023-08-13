@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;700&display=swap');
+
+/* si no te value, posar is required, sino message personalitzat */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --FORM-SIDE-PADD: 50px;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Nunito', sans-serif;
+    background-color: whitesmoke;
+    display: flex;
+}
+
+/* SIDE HERO */
+
+.side-hero {
+    position: relative;
+    min-width: 430px;
+    background-image: url(img/gloria-cretu-road.jpg);
+    background-size: cover;
+}
+
+.side-hero .title {
+    position: absolute;
+    top: 25%;
+    padding: 30px 20px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: center;
+    font-size: 3.7rem;
+    font-weight: 800;
+}
+
+.side-hero .author {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    color: white;
+    opacity: 0.8;
+    text-align: center;
+    font-size: 0.85rem;
+}
+
+/* FORM CONTAINER */
+
+.info-container {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
+.info-container > p:not(.account-already) {
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding-inline: var(--FORM-SIDE-PADD);
+    padding-bottom: 20px;
+}
+
+.form-container {
+    background-color: white;
+    box-shadow: 0px 3px 5px 2px rgba(0, 0, 0, 0.15);
+    padding-top: 25px;
+    padding-bottom: 40px;
+    margin-bottom: 30px;
+    padding-inline: var(--FORM-SIDE-PADD);
+    text-transform: uppercase;
+}
+
+.form-container p.form-title {
+    font-weight: 500;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-flow: row wrap;
+    row-gap: 20px;
+    column-gap: 80px;
+}
+
+form label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #4f4f4f;
+}
+
+form input {
+    height: 30px;
+    width: 230px;
+    padding-inline: 0.4em;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+/* INPUT VALIDATION */
+
+input:valid:not(:focus) {
+    background-color: rgba(22, 205, 22, 0.3);
+    border-color: rgb(22, 205, 22);
+    border-width: 1.5px;
+}
+
+.possible-invalid:not(:focus) {
+    background-color: rgba(205, 22, 22, 0.3);
+    border-color: rgb(205, 22, 22);
+    border-width: 1.5px;
+}
+
+.invalid-message {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.invalid-message::after {
+    position: absolute;
+    left: 5px;
+    bottom: -22px;
+    color: red;
+    text-transform: initial;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+.invalid-message.text-field::after {
+    content: '* This field is required';
+}
+
+.invalid-message.email-field::after {
+    content: '* Enter a valid email email';
+}
+
+.invalid-message.tel-field::after {
+    content: '* Enter a phone number';
+}
+
+.invalid-message.pass-field::after {
+    content: '* Must be at least 8 characters';
+}
+
+/* BUTTON & LOG-IN */
+
+button[type="submit"] {
+    margin-inline: var(--FORM-SIDE-PADD);
+    margin-bottom: 20px;
+    padding: 15px 20px;
+    font-size: 1.8rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 20px;
+    background-color: rgb(67, 175, 67);
+    color: whitesmoke;
+    box-shadow: 0px 3px 4px 2px rgba(0, 0, 0, 0.15);
+}
+
+button[type="submit"]:hover {
+    background-color: rgb(52, 156, 52);
+    cursor: pointer;
+}
+
+p.account-already {
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding-inline: var(--FORM-SIDE-PADD);
+    color: #333;
+}
+
+p.account-already span.log-in {
+    color: rgb(67, 175, 67);
+    text-transform: uppercase;
+}
+
+p.account-already span.log-in:hover {
+    color: rgb(52, 156, 52);
+    cursor: pointer;
+}

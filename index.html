@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign-Up Form</title>
     <link rel="stylesheet" href="style.css">
+    <script src="form-validation.js" defer></script>
 </head>
 <body>
     <div class="side-hero">
@@ -17,27 +18,27 @@
         <div class="form-container">
             <p class="form-title">Let's do this!</p>
             <form id="log-in-form" action="" method="post">
-                <div>
+                <div class="text-field">
                     <label for="first-name">First Name</label>
                     <input type="text" name="first-name" id="first-name" required>
                 </div>
-                <div>
+                <div class="text-field">
                     <label for="last-name">Last Name</label>
                     <input type="text" name="last-name" id="last-name" required>
                 </div>
-                <div>
+                <div class="email-field">
                     <label for="email">Email</label>
                     <input type="email" name="email" id="email" title="Enter a valid email" required>
                 </div>
-                <div>
+                <div class="tel-field">
                     <label for="phone-num">Phone Number</label>
                     <input type="tel" name="phone-num" id="phone-num" pattern="[0-9]*" title="Enter a valid phone number" required>
                 </div>
-                <div>
+                <div class="pass-field">
                     <label for="password">Password</label>
                     <input type="password" name="password" id="password" pattern=".{8,}" minlength="8" title="Password must be at least 8 characters" required>
                 </div>
-                <div>
+                <div class="pass-field">
                     <label for="password-confirm">Confirm Password</label>
                     <input type="password" name="password-confirm" id="password-confirm" pattern=".{8,}" title="Password must be at least 8 characters" required>
                 </div>
